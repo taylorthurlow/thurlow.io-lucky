@@ -1,0 +1,25 @@
+name: thurlow_io
+version: 0.1.0
+
+authors:
+  - Taylor Thurlow <taylorthurlow8@gmail.com>
+
+targets:
+  thurlow_io:
+    main: src/thurlow_io.cr
+
+crystal: 0.28.0
+
+dependencies:
+  lucky:
+    github: luckyframework/lucky
+    version: ~> 0.14
+  authentic:
+    github: luckyframework/authentic
+    version: ~> 0.3
+  carbon:
+    github: luckyframework/carbon
+    version: ~> 0.1
+  lucky_flow:
+    github: luckyframework/lucky_flow
+    version: ~> 0.4
