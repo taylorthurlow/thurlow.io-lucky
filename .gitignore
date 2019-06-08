@@ -2,6 +2,7 @@
 /lib/
 /bin/
 /.shards/
+/tmp
 *.dwarf
 /node_modules
 yarn-error.log
