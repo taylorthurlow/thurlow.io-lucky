@@ -1,0 +1,32 @@
+#posts-list {
+  .posts-list-post {
+    display: grid;
+    grid-template-columns: 10em auto;
+
+    &:not(:last-child) {
+      margin-bottom: 2em;
+    }
+
+    &-left {
+      grid-column: 1;
+      color: $color_text_neutral;
+
+      .posts-list-post-date {
+      }
+    }
+
+    &-right {
+      grid-column: 2;
+
+      .posts-list-post-title {
+        font-size: 1.75rem;
+        margin-bottom: 0.5em;
+        color: $color_text_darkest;
+      }
+
+      .posts-list-post-tagline {
+        color: $color_text_dark;
+      }
+    }
+  }
+}

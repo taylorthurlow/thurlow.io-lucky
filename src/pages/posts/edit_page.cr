@@ -14,6 +14,10 @@ class Posts::EditPage < MainLayout
       field(f.slug) { |i| text_input i }
       field(f.contents) { |i| textarea i }
       field(f.published) { |i| checkbox i }
+      # field(f.last_updated) do |i|
+      #   # input({"type" => "date", "value" => i.value.to_s || ""})
+      #   text_input i, type: "date"
+      # end
 
       submit "Update Post"
     end
