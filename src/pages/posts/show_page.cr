@@ -5,5 +5,6 @@ class Posts::ShowPage < MainLayout
     para @post.title
     para @post.tagline
     para @post.contents
+    para @post.published
   end
 end
