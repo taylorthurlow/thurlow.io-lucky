@@ -16,7 +16,7 @@ module.exports = {
   snippetOptions: {
     rule: {
       match: /<\/head>/i,
-      fn: function (snippet, match) {
+      fn: function(snippet, match) {
         return snippet + match;
       }
     }
@@ -25,5 +25,6 @@ module.exports = {
   watchEvents: ["change"],
   open: false,
   browser: "default",
-  ghostMode: false
+  ghostMode: false,
+  notify: false
 };
