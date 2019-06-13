@@ -24,9 +24,7 @@ JAVASCRIPT
 
   private def input_friendly_time(field)
     field.value.try do |value|
-      value.to_s("%FT%X.000Z")
-      # Time.parse(value, "%Y-%m-%d %H:%M:%S %z", Time::Location::UTC).to_s("%FT%X.000Z")
-      # TimeParser.new(value).as_utc.to_s("%FT%X.000Z")
+      value.to_s("%FT%X")
     end
   end
 end

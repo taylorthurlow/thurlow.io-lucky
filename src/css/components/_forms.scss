@@ -30,5 +30,20 @@
 		textarea {
 			height: 10em;
 		}
+
+		div.error {
+			color: darkred;
+			margin-bottom: 1em;
+		}
+
+		.date-reset-button {
+			width: 100%;
+			margin-bottom: 1em;
+				text-align: center;
+
+			a {
+				color: $color_text_light;
+			}
+		}
 	}
 }

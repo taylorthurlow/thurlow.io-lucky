@@ -16,10 +16,27 @@ class Posts::EditPage < MainLayout
         field(f.tagline) { |i| text_input i }
         field(f.slug) { |i| text_input i }
         field(f.last_updated) { |i| datetime_picker i }
+
+        div class: "date-reset-button" do
+          link "Clear Last Updated Value", "#", class: "clear-last-updated"
+        end
+
+        raw <<-JAVASCRIPT
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              document.querySelectorAll(".clear-last-updated")[0].onclick = function() {
+                document.getElementById("post_last_updated").value = "";
+                document.querySelectorAll("input.flatpickr.form-control")[0].value = "";
+              };
+            });
+          </script>
+        JAVASCRIPT
+
+        setup_time_picker
+
         field(f.published) { |i| checkbox i }
         field(f.contents) { |i| textarea i }
 
-        setup_time_picker
         submit "Update Post"
       end
     end
