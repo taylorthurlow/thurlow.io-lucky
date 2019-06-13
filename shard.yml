@@ -13,13 +13,15 @@ crystal: 0.29.0
 dependencies:
   lucky:
     github: luckyframework/lucky
-    version: ~> 0.15
+    version: ~> 0.15.0
   authentic:
     github: luckyframework/authentic
-    version: ~> 0.3
+    version: ~> 0.3.0
   carbon:
     github: luckyframework/carbon
-    version: ~> 0.1
+    version: ~> 0.1.0
   lucky_flow:
     github: luckyframework/lucky_flow
-    version: ~> 0.4
+    version: ~> 0.4.1
+  dotenv:
+    github: gdotdesign/cr-dotenv
