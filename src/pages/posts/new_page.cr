@@ -7,23 +7,16 @@ class Posts::NewPage < MainLayout
   end
 
   private def render_form(f)
-    form_for Posts::Create do
-      post_fields(f)
+    div class: "record-form post-form" do
+      form_for Posts::Create do
+        field(f.title) { |i| text_input i, autofocus: "true" }
+        field(f.tagline) { |i| text_input i }
+        field(f.slug) { |i| text_input i }
+        field(f.published) { |i| checkbox i }
+        field(f.contents) { |i| textarea i }
 
-      submit "Create Post"
+        submit "Create Post"
+      end
     end
-  end
-
-  private def post_fields(f)
-    field(f.title) { |i| text_input i, autofocus: "true" }
-
-    field(f.tagline) { |i| text_input i }
-
-    field(f.slug) { |i| text_input i }
-
-    field(f.contents) { |i| text_input i }
-
-    label_for f.published
-    checkbox(f.published, value: "true")
   end
 end
