@@ -1,0 +1,34 @@
+.record-form {
+	width: 100%;
+	margin-top: 3em;
+
+	> form {
+		label {
+			font-size: 1.25em;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			margin-top: 0.25em;
+			margin-bottom: 1em;
+			padding: 0.5em;
+			box-sizing: border-box;
+			border: 1px solid $color_text_light;
+
+			&[type="submit"] {
+				transition: 0.2s ease;
+
+				&:hover {
+					background-color: $color_text_darkest;
+					color: $color_text_lightest;
+					cursor: pointer;
+				}
+			}
+		}
+
+		textarea {
+			height: 10em;
+		}
+	}
+}
