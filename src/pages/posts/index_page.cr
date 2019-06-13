@@ -14,7 +14,15 @@ class Posts::IndexPage < MainLayout
   private def render_post_list_entry(post)
     div class: "posts-list-post-left" do
       div class: "posts-list-post-date" do
-        text post.created_at.to_s("%-d %B %Y")
+        date_string = post.created_at.to_s("%-d %B %Y")
+        text "posted #{date_string}"
+      end
+
+      unless post.last_updated.nil?
+        div class: "posts-list-post-date-updated" do
+          date_string = post.last_updated.not_nil!.to_s("%-d %B %Y")
+          text "last updated #{date_string}"
+        end
       end
     end
 

@@ -1,7 +1,7 @@
 #posts-list {
   .posts-list-post {
     display: grid;
-    grid-template-columns: 10em auto;
+    grid-template-columns: 15em auto;
 
     &:not(:last-child) {
       margin-bottom: 2em;
@@ -9,9 +9,16 @@
 
     &-left {
       grid-column: 1;
-      color: $color_text_light;
+      text-align: right;
+      margin-right: 2em;
 
       .posts-list-post-date {
+        color: $color_text_light;
+        margin-bottom: 1em;
+      }
+
+      .posts-list-post-date-updated {
+        color: $color_text_lighter;
       }
     }
 
