@@ -35,8 +35,13 @@ body {
 a {
   color: $color_text_darkest;
   text-decoration: none;
+  transition: 0.15s ease;
 
   &:visited {
     color: $color_text_darkest;
+  }
+
+  &:hover {
+    color: $color_accent;
   }
 }

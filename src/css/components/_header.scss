@@ -20,10 +20,10 @@ header {
     }
 
     .header-name {
-      transition: 0.2s ease;
+      transition: 0.15s ease;
 
       &:hover {
-        color: $color_link;
+        color: $color_accent;
         cursor: pointer;
       }
     }
