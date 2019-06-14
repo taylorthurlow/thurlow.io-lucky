@@ -11,6 +11,7 @@
       grid-column: 1;
       text-align: right;
       margin-right: 2em;
+      margin-top: 0.6em;
 
       .posts-list-post-date {
         color: $color_text_light;
@@ -27,12 +28,14 @@
 
       .posts-list-post-title {
         font-size: 1.75rem;
+        line-height: 130%;
         margin-bottom: 0.5em;
         color: $color_text_darkest;
       }
 
       .posts-list-post-tagline {
         color: $color_text_dark;
+        line-height: 150%;
       }
     }
   }
