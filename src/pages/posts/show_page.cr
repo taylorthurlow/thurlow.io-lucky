@@ -1,10 +1,21 @@
+require "markd"
+
 class Posts::ShowPage < MainLayout
   needs post : Post
 
   def content
-    para @post.title
-    para @post.tagline
-    para @post.contents
-    para @post.published
+    div class: "post-show" do
+      div class: "post-title" do
+        text @post.title
+      end
+
+      div class: "post-contents" do
+        raw Markd.to_html(@post.contents)
+      end
+
+      div class: "post-edit" do
+        link "edit", Posts::Edit.with(@post)
+      end
+    end
   end
 end
