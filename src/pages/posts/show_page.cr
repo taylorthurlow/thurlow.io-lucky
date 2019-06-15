@@ -17,5 +17,13 @@ class Posts::ShowPage < MainLayout
         link "edit", Posts::Edit.with(@post)
       end
     end
+
+    raw <<-JAVASCRIPT
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          window.setupMediumZoom(".post-contents img");
+        });
+      </script>
+    JAVASCRIPT
   end
 end

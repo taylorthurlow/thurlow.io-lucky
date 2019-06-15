@@ -4,6 +4,7 @@
   "dependencies": {
     "flatpickr": "^4.6.1",
     "font-awesome": "^4.7.0",
+    "medium-zoom": "^1.0.4",
     "normalize-scss": "^7.0.1",
     "rails-ujs": "^5.1.4"
   },
