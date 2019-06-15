@@ -6,6 +6,10 @@ class Posts::NewPage < MainLayout
     render_form(@form)
   end
 
+  def page_title
+    "New Post"
+  end
+
   private def render_form(f)
     div class: "record-form post-form" do
       form_for Posts::Create do

@@ -26,4 +26,8 @@ class Posts::ShowPage < MainLayout
       </script>
     JAVASCRIPT
   end
+
+  def page_title
+    @post.title
+  end
 end

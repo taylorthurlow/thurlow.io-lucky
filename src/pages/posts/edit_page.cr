@@ -4,6 +4,10 @@ class Posts::EditPage < MainLayout
   needs form : PostForm
   needs post : Post
 
+  def page_title
+    "Edit Post - #{@post.title}"
+  end
+
   def content
     h1 "Edit Post"
     render_form(@form)

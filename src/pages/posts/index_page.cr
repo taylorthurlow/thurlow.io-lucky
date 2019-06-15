@@ -11,6 +11,10 @@ class Posts::IndexPage < MainLayout
     end
   end
 
+  def page_title
+    "Posts"
+  end
+
   private def render_post_list_entry(post)
     div class: "posts-list-post-left" do
       div class: "posts-list-post-date" do
