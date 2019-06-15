@@ -26,5 +26,5 @@ dependencies:
   dotenv:
     github: gdotdesign/cr-dotenv
   markd:
-    github: icyleaf/markd
+    github: taylorthurlow/markd
     version: ~> 0.1.1

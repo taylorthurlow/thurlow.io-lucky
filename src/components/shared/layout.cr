@@ -12,6 +12,7 @@ module Shared::Layout
     head do
       utf8_charset
       title "thurlow.io - #{page_title}"
+      js_link "https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"
       css_link asset("css/app.css")
       js_link asset("js/app.js"), defer: "true"
       csrf_meta_tags

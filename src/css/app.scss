@@ -14,6 +14,7 @@
 @import "~normalize-scss/sass/normalize/import-now";
 @import "~font-awesome/scss/font-awesome";
 @import "~flatpickr/dist/flatpickr.min.css";
+@import "~color-themes-for-google-code-prettify/dist/themes/tomorrow-night.min.css";
 
 @import "mixins/fonts";
 
@@ -23,6 +24,8 @@
 @import "components/content";
 @import "components/footer";
 @import "components/forms";
+
+@import "components/code";
 
 @import "components/posts_index";
 @import "components/posts_show";

@@ -65,7 +65,7 @@ shards:
     version: 0.2.2
 
   markd:
-    github: icyleaf/markd
+    github: taylorthurlow/markd
     version: 0.1.1
 
   optarg:

@@ -10,7 +10,8 @@ class Posts::ShowPage < MainLayout
       end
 
       div class: "post-contents" do
-        raw Markd.to_html(@post.contents)
+        options = Markd::Options.new(prettyprint: true)
+        raw Markd.to_html(@post.contents, options)
       end
 
       div class: "post-edit" do
@@ -22,6 +23,7 @@ class Posts::ShowPage < MainLayout
       <script>
         document.addEventListener("DOMContentLoaded", function() {
           window.setupMediumZoom(".post-contents img");
+          PR.prettyPrint();
         });
       </script>
     JAVASCRIPT

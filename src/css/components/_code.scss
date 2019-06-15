@@ -1,0 +1,13 @@
+pre.prettyprint {
+  overflow-x: auto;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 0.25em;
+  font-size: 0.8em;
+}
+
+code:not([class^="lang"]) {
+  background-color: $color-text-lightest;
+  padding: 0.1em 0.15em;
+  border-radius: 0.1em;
+}
