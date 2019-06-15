@@ -37,5 +37,19 @@ abstract class MainLayout
   end
 
   private def render_footer
+    footer do
+      div id: "footer-content" do
+        div id: "footer-content-left" do
+          raw "&copy#{Time.now.year} Taylor Thurlow"
+        end
+
+        div id: "footer-content-right" do
+          text "Built with "
+          link "Crystal", "https://crystal-lang.org/"
+          text " on the "
+          link "Lucky Framework", "https://luckyframework.org/"
+        end
+      end
+    end
   end
 end

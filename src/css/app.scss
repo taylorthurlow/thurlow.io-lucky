@@ -30,7 +30,14 @@
 body {
   background-color: #fff;
   font-family: "Bitter", serif;
+  margin: 0 0 2.5em;
+  /* bottom = footer height */
   color: $color_text_darkest;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
 }
 
 a {
