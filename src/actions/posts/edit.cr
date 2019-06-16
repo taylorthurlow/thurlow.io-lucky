@@ -1,7 +1,11 @@
 class Posts::Edit < BrowserAction
-  route do
-    post = PostQuery.find(post_id)
+  get "/posts/:post_slug/edit" do
+    slug = post_slug.downcase
 
-    render Posts::EditPage, post: post, form: PostForm.new(post)
+    if (post = PostQuery.new.slug(slug).first?)
+      render Posts::EditPage, post: post, form: PostForm.new(post)
+    else
+      render Errors::ShowPage, title: "Post not found", status: 404
+    end
   end
 end

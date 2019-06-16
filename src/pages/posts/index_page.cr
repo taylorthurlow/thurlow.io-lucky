@@ -32,7 +32,7 @@ class Posts::IndexPage < MainLayout
 
     div class: "posts-list-post-right" do
       div class: "posts-list-post-title" do
-        link post.title, Posts::Show.with(post)
+        link post.title, Posts::Show.with(post.slug)
       end
 
       div class: "posts-list-post-tagline" do
