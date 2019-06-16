@@ -1,4 +1,6 @@
 class Posts::Edit < BrowserAction
+  basic_auth
+
   get "/posts/:post_slug/edit" do
     slug = post_slug.downcase
 

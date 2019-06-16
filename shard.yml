@@ -14,9 +14,6 @@ dependencies:
   lucky:
     github: luckyframework/lucky
     version: ~> 0.15.0
-  authentic:
-    github: luckyframework/authentic
-    version: ~> 0.3.0
   carbon:
     github: luckyframework/carbon
     version: ~> 0.1.0
@@ -25,6 +22,9 @@ dependencies:
     version: ~> 0.4.1
   dotenv:
     github: gdotdesign/cr-dotenv
+  lucky-basic-auth:
+    github: jwoertink/lucky-basic-auth
+    version: ~> 0.1.2
   markd:
     github: taylorthurlow/markd
     version: ~> 0.1.1

@@ -4,4 +4,4 @@ Dotenv.load
 require "avram"
 require "lucky"
 require "carbon"
-require "authentic"
+require "lucky-basic-auth"

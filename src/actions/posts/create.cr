@@ -1,4 +1,6 @@
 class Posts::Create < BrowserAction
+  basic_auth
+
   route do
     PostForm.create(params) do |form, post|
       if post

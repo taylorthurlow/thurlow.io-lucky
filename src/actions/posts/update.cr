@@ -1,4 +1,6 @@
 class Posts::Update < BrowserAction
+  basic_auth
+
   route do
     post = PostQuery.find(post_id)
 
