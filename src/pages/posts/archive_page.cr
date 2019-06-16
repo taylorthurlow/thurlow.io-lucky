@@ -26,6 +26,7 @@ class Posts::ArchivePage < MainLayout
             td last_updated_string(post)
             td class: "actions" do
               link "", Posts::Edit.with(post.slug), class: "fa fa-pencil"
+              link "", Posts::Delete.with(post.slug), class: "fa fa-trash"
             end
           end
         end
