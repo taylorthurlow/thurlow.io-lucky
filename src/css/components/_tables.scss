@@ -1,0 +1,17 @@
+div#content {
+  table {
+    thead > tr {
+      font-weight: bold;
+    }
+
+    tbody {
+      td {
+        padding: 0.25em;
+
+        &.actions a {
+          margin-left: 0.25em;
+        }
+      }
+    }
+  }
+}
