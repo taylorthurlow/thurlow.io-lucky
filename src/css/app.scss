@@ -31,16 +31,16 @@
 @import "components/posts_index";
 @import "components/posts_show";
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: #fff;
   font-family: "Bitter", serif;
-  margin: 0 0 2.5em;
-  /* bottom = footer height */
   color: $color_text_darkest;
-}
-
-html {
-  position: relative;
+  display: grid;
+  grid-template-rows: 3em auto 2.5em;
   min-height: 100%;
 }
 
