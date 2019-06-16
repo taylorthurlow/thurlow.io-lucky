@@ -13,10 +13,6 @@ class Posts::ShowPage < MainLayout
         options = Markd::Options.new(prettyprint: true)
         raw Markd.to_html(@post.contents, options)
       end
-
-      div class: "post-edit" do
-        link "edit", Posts::Edit.with(@post)
-      end
     end
 
     raw <<-JAVASCRIPT
