@@ -14,12 +14,13 @@ class Posts::ArchivePage < MainLayout
       tbody do
         @posts.each do |post|
           tr do
-            td post.title
+            td do
+              link(post.title, Posts::Show.with(post.slug))
+            end
             td post.published ? "✓" : ""
             td post.created_at.to_s("%m/%d/%Y")
             td last_updated_string(post)
             td class: "actions" do
-              link "", Posts::Show.with(post.slug), class: "fa fa-eye"
               link "", Posts::Edit.with(post.slug), class: "fa fa-pencil"
             end
           end
