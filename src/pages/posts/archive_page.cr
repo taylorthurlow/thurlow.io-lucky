@@ -2,6 +2,10 @@ class Posts::ArchivePage < MainLayout
   needs posts : PostQuery
 
   def content
+    div style: "text-align: center; margin-bottom: 1em;" do
+      link "Add a new post", Posts::New
+    end
+
     table id: "posts-archive" do
       thead do
         td "Title"
