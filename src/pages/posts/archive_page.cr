@@ -15,7 +15,7 @@ class Posts::ArchivePage < MainLayout
         @posts.each do |post|
           tr do
             td post.title
-            td post.published
+            td post.published ? "✓" : ""
             td post.created_at.to_s("%m/%d/%Y")
             td post.updated_at.to_s("%m/%d/%Y")
             td class: "actions" do
