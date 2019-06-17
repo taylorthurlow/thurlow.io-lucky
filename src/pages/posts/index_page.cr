@@ -16,28 +16,29 @@ class Posts::IndexPage < MainLayout
   end
 
   private def render_post_list_entry(post)
-    div class: "posts-list-post-left" do
-      div class: "posts-list-post-date" do
-        date_string = post.created_at.to_s("%-d %B %Y")
-        text "posted #{date_string}"
-      end
+    div class: "posts-list-post-dates" do
+      if post.last_updated
+        created = "posted #{formatted_time(post.created_at)}, "
+        span created, class: "post-date-created"
 
-      unless post.last_updated.nil?
-        div class: "posts-list-post-date-updated" do
-          date_string = post.last_updated.not_nil!.to_s("%-d %B %Y")
-          text "last updated #{date_string}"
-        end
+        updated = "updated #{formatted_time(post.last_updated.not_nil!)}"
+        span updated, class: "post-date-updated"
+      else
+        created = "posted #{formatted_time(post.created_at)}"
+        span created, class: "post-date-created"
       end
     end
 
-    div class: "posts-list-post-right" do
-      div class: "posts-list-post-title" do
-        link post.title, Posts::Show.with(post.slug)
-      end
-
-      div class: "posts-list-post-tagline" do
-        text post.tagline
-      end
+    div class: "posts-list-post-title" do
+      link post.title, Posts::Show.with(post.slug)
     end
+
+    div class: "posts-list-post-tagline" do
+      text post.tagline
+    end
+  end
+
+  private def formatted_time(time : Time) : String
+    time.to_s("%-d %B %Y")
   end
 end
