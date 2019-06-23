@@ -33,7 +33,15 @@
 @import "components/posts_show";
 
 html {
-  height: 100%;
+  // apply a natural box layout model to all elements, but allowing components
+  // to change
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -41,8 +49,9 @@ body {
   font-family: "Bitter", serif;
   color: $color_text_darkest;
   display: grid;
-  grid-template-rows: 3em auto 2.5em;
-  min-height: 100%;
+  grid-template-rows: 3em auto auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 a {

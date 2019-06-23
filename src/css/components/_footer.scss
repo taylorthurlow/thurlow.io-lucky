@@ -1,28 +1,23 @@
 footer {
   grid-row-start: 3;
   grid-row-end: 4;
-  background-color: #fafafa;
   color: $color_text_light;
-  padding: 0 1em;
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.07);
   font-size: 1em;
-  height: 2.5em;
   line-height: 2.5em;
 
   #footer-content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 50rem;
     margin: 0 auto;
+    text-align: center;
+    color: $color_text_lighter;
 
-    &-left {
+    #footer-copyright {
     }
 
-    &-right {
+    #footer-notes {
       font-size: 0.75em;
 
       a {
-        color: darken($color_text_light, 16);
+        color: $color_text_light;
       }
     }
   }

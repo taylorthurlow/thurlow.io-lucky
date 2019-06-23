@@ -1,4 +1,5 @@
 .post-show {
+  max-width: 100%;
 }
 
 .post-title {
@@ -10,8 +11,12 @@
 }
 
 .post-contents {
-  font-size: 1.25em;
+  font-size: 1em;
   line-height: 140%;
+
+  @include sm {
+    font-size: 1.25em;
+  }
 
   a {
     color: darken($color_accent, 16);

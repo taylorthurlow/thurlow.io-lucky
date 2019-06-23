@@ -39,11 +39,11 @@ abstract class MainLayout
   private def render_footer
     footer do
       div id: "footer-content" do
-        div id: "footer-content-left" do
+        div id: "footer-copyright" do
           raw "&copy#{Time.now.year} Taylor Thurlow"
         end
 
-        div id: "footer-content-right" do
+        div id: "footer-notes" do
           text "Built with "
           link "Crystal", "https://crystal-lang.org/"
           text " on the "
