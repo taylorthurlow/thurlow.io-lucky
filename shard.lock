@@ -65,8 +65,8 @@ shards:
     version: 0.2.2
 
   markd:
-    github: taylorthurlow/markd
-    version: 0.1.1
+    github: icyleaf/markd
+    commit: 445e6b7c37b06ce15676ee81a9bb4a362f74a5d6
 
   optarg:
     github: mosop/optarg

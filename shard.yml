@@ -26,5 +26,5 @@ dependencies:
     github: jwoertink/lucky-basic-auth
     version: ~> 0.1.2
   markd:
-    github: taylorthurlow/markd
-    version: ~> 0.1.1
+    github: icyleaf/markd
+    commit: 445e6b7c
