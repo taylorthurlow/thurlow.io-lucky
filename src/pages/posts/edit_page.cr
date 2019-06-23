@@ -19,6 +19,7 @@ class Posts::EditPage < MainLayout
         field(f.title) { |i| text_input i, autofocus: "true" }
         field(f.tagline) { |i| text_input i }
         field(f.slug) { |i| text_input i }
+        field(f.all_tags) { |i| text_input i, value: @post.all_tags }
         field(f.last_updated) { |i| datetime_picker i }
 
         div class: "date-reset-button" do

@@ -27,6 +27,10 @@ class Posts::IndexPage < MainLayout
         created = "posted #{formatted_time(post.created_at)}"
         span created, class: "post-date-created"
       end
+
+      div class: "posts-list-post-tags" do
+        text post.all_tags
+      end
     end
 
     div class: "posts-list-post-title" do

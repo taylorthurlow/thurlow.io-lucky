@@ -6,8 +6,21 @@
   font-size: 2.5em;
   font-weight: bold;
   line-height: 140%;
-  margin-bottom: 1.25em;
+  margin-bottom: 0.5em;
   text-align: center;
+}
+
+.post-tags {
+  text-align: center;
+  margin-bottom: 2.5em;
+  color: $color_text_light;
+
+  ul {
+    li {
+      display: inline-block;
+      margin-right: 3em;
+    }
+  }
 }
 
 .post-contents {

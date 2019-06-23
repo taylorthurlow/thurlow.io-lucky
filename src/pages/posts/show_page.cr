@@ -9,6 +9,16 @@ class Posts::ShowPage < MainLayout
         text @post.title
       end
 
+      div class: "post-tags" do
+        tags = @post.tags!.map(&.name)
+
+        ul do
+          tags.each do |tag|
+            li { text tag }
+          end
+        end
+      end
+
       div class: "post-contents" do
         options = Markd::Options.new(prettyprint: true)
         raw Markd.to_html(@post.contents, options)

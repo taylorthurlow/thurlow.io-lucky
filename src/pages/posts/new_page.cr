@@ -16,6 +16,7 @@ class Posts::NewPage < MainLayout
         field(f.title) { |i| text_input i, autofocus: "true" }
         field(f.tagline) { |i| text_input i }
         field(f.slug) { |i| text_input i }
+        field(f.all_tags) { |i| text_input i }
         field(f.published) { |i| checkbox i }
         field(f.contents) { |i| textarea i }
 

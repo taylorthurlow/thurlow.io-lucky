@@ -6,5 +6,12 @@ class Post < BaseModel
     column slug : String
     column published : Bool
     column last_updated : Time?
+
+    has_many taggings : Tagging
+    has_many tags : Tag, through: :taggings
+  end
+
+  def all_tags
+    tags!.map(&.name).join(", ")
   end
 end
