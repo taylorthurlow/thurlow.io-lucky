@@ -50,11 +50,19 @@ class PostForm < Post::BaseForm
     # Add any tags which are in our provided list but aren't already associated
     # with the post
     tag_strings.each do |tag_string|
-      tag = TagQuery.new.preload_taggings.name(tag_string).first?
-      tag = TagForm.create!(name: tag_string) unless tag
+      post_tags = post.tags!
 
-      tagging = TaggingQuery.new.tag_id(tag.id).first?
-      tagging = TaggingForm.create!(post_id: post.id, tag_id: tag.id) unless tagging
+      # Find an existing Tag to re-use
+      unless (tag = TagQuery.new.preload_taggings.name(tag_string).first?)
+        # Create a new Tag if we didn't find an existing one
+        tag = TagForm.create!(name: tag_string)
+      end
+
+      # Find an existing Tagging between our Post and Tag
+      unless (tagging = TaggingQuery.new.post_id(post.id).tag_id(tag.id).first?)
+        # Create a new Tagging if we didn't find an existing one
+        tagging = TaggingForm.create!(post_id: post.id, tag_id: tag.id)
+      end
     end
   end
 end
