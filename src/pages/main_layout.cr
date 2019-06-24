@@ -10,9 +10,10 @@ abstract class MainLayout
 
       body do
         render_header
-        render_flash
 
         div id: "content" do
+          render_flash
+
           content
         end
 
