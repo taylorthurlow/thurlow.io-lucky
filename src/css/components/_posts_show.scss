@@ -31,8 +31,12 @@
     font-size: 1.25em;
   }
 
-  a {
+  a, a:visited {
     color: darken($color_accent, 16);
+    
+    &:hover {
+      color: $color_accent;
+    }
   }
 
   img {
