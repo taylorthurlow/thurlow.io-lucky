@@ -30,8 +30,8 @@ abstract class MainLayout
         end
 
         div id: "header-content-right" do
-          link "", "/files/resume.pdf", class: "fa fa-file-text"
-          link "", "https://github.com/taylorthurlow", class: "fa fa-lg fa-code-fork"
+          link "", "/files/resume.pdf", class: "fa fa-id-card"
+          link "", "https://github.com/taylorthurlow", class: "fa fa-lg fa-github"
         end
       end
     end
